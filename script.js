@@ -1,8 +1,31 @@
-// complete this js code
-function Person(name, age) {}
+class Person {
+	constructor(name,age){
+		this._name = name;
+		this._age = age;
+	}
 
-function Employee(name, age, jobTitle) {}
+	get name(){
+		return this._name;
+	}
 
-// Do not change code below this line
+	set age(age){
+		this._age = age;
+	}
+}
+
+class Student extends Person {
+	study(){
+		console.log(this._name + " is studying");
+	}
+}
+
+class Teacher extends Person {
+	teach(){
+		console.log(this._name + " is teaching");
+	}
+}
+
+// Do not change the code below this line
 window.Person = Person;
-window.Employee = Employee;
+window.Student = Student;
+window.Teacher = Teacher;
